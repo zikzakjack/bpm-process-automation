@@ -41,10 +41,12 @@
 	-	Activity gets cancelled through the occurence of an event
 	-	If the event occurs an alternative path is token
 
-# Activity >> Activity or Task defines the unit of work
+# Activity 
+	-	Activity or Task defines the unit of work
 
-* Task	>>	Task describes the action of sending the book and invoice
-* Event	>>	Event states that the book and invoice have been sent. No actions are taken.
+# Task vs Event 
+	-	Task	>>	Task describes the action of sending the book and invoice
+	-	Event	>>	Event states that the book and invoice have been sent. No actions are taken.
 
 # Gateway >> Defines a decision point
 
