@@ -1,76 +1,98 @@
+# BPMN
 
-Processes are algorithms of businesses
-BPMN 2.0 is a standard to define processes
+* Processes are algorithms of businesses
+* BPMN 2.0 is a standard to define processes
 
-Core Objects
+# Core Objects
 	Events
 	FLOW Objects (Activities)
 	Gateways
 	Pools
 	Lanes
 
-Events
+# Events
 	Start 	-	triggers the process
 	End		-	defines the state that terminates the process
+	We need two end events if each of them trigger a different follow up activities
 	
-Activity >> Activity or Task defines the unit of work
-
-Gateway >> Defines a decision point
-
-Exclusive Gateway
-	-	Defines a decision point
-	-	Only one path can be taken
-	
-Pools and Lanes 
-	-	represents the responsibilities for activities in a process
-	-	Lanes sub divide pools (roles, departments, systems)
-
-Token
-	-	token rolls through the process from start to end event
-	-	real strength of token is to visualize how different gateways work
-	-	token follows the selected path
-
-Parallel Gateway
-	-	No decision making
-	-	All outgoing branches are activated
-	-	Token is cloned
-	-	One Cloned Token per Outgoing branch
-
-Parallel Gateway (Closing)
-	-	Waits for all inputs
-	-	All tokens are merged into one
-	
-Inclusive Gateway
-	-	Defines a decision point
-	-	Any combination of path can be taken
-	
-Inclusive Gateway (Closing)
-	-	Waits for all inputs
-	-	Is informed about all preceding token flows
-
-Collapsed Pools
-	-	Don't show the process flow of the participant
-	-	Collapsed Pools are used to represent external process participants
-	
-Message Event
+## Message Event
 	-	Represents incoming or outgoing messages 
 	-	Is also used for sending or receiving goods, money or other things
 	-	A Message can be sent or received and occur at different stages
 
-Message Event Types
+## Message Event Types
 	-	Start Message Event
 	-	Catching Intermediate Message Event (Defines a waiting point)
 	-	Throwing Intermediate Message Event (nice to have)
 	-	End Message Event
 
-Task	>>	Task describes the action of sending the book and invoice
-Event	>>	Event states that the book and invoice have been sent. No actions are taken.
+## Plain Intermediate Event	>> to visualize a milestone
 
-Plain Intermediate Event	>> to visualize a milestone
+## Timer Event
+	-	Represents a date or time period
+	-	Start Timer Event
+	-	Intermediate Timer Event
 
-We need two end events if each of them trigger a different follow up activities
+## Conditional Event		
+	-	Defines an Event which is triggered if a condition is evaluated to true
+	-	Can also be a waiting point
 
-Dead Lock
+## Attached Events
+	-	Activity gets cancelled through the occurence of an event
+	-	If the event occurs an alternative path is token
+
+# Activity >> Activity or Task defines the unit of work
+
+* Task	>>	Task describes the action of sending the book and invoice
+* Event	>>	Event states that the book and invoice have been sent. No actions are taken.
+
+# Gateway >> Defines a decision point
+
+## Exclusive Gateway
+	-	Defines a decision point
+	-	Only one path can be taken
+	
+## Parallel Gateway
+	-	No decision making
+	-	All outgoing branches are activated
+	-	Token is cloned
+	-	One Cloned Token per Outgoing branch
+
+## Parallel Gateway (Closing)
+	-	Waits for all inputs
+	-	All tokens are merged into one
+	
+## Inclusive Gateway
+	-	Defines a decision point
+	-	Any combination of path can be taken
+	
+## Inclusive Gateway (Closing)
+	-	Waits for all inputs
+	-	Is informed about all preceding token flows
+
+## Event Based Gateway
+	-	Reacts to occurring event
+	-	Only one path can be taken
+	-	Is always followed by catching events
+	-	the process will wait until one of the events occurs
+	-	its not possible that all events occur at the same time
+	-	No dedicated closing event based gateway
+
+# Pools and Lanes 
+	-	represents the responsibilities for activities in a process
+	-	Lanes sub divide pools (roles, departments, systems)
+
+## Collapsed Pools
+	-	Don't show the process flow of the participant
+	-	Collapsed Pools are used to represent external process participants
+
+# Token
+	-	token rolls through the process from start to end event
+	-	real strength of token is to visualize how different gateways work
+	-	token follows the selected path
+
+# Traps
+## Dead Lock
 	-	Getting stuck for ever
 	-	Opening Exclusive Gateway
 	-	Closing Parallel Gateway
@@ -78,7 +100,7 @@ Dead Lock
 	-	Two tokens are expected
 	-	the process gets stuck
 	
-Multi Merge
+## Multi Merge
 	-	based on misleading use of gateways
 	-	Opening Parallel Gateway
 	-	Closing Exclusive Gateway
@@ -88,29 +110,7 @@ Multi Merge
 	-	Several Tokens rolling through the entire process
 	-	Instead of being merged into a single token again
 
-Timer Event
-	-	Represents a date or time period
-	-	Start Timer Event
-	-	Intermediate Timer Event
-
-Conditional Event		
-	-	Defines an Event which is triggered if a condition is evaluated to true
-	-	Can also be a waiting point
-	-
-
-Event Based Gateway
-	-	Reacts to occurring event
-	-	Only one path can be taken
-	-	Is always followed by catching events
-	-	the process will wait until one of the events occurs
-	-	its not possible that all events occur at the same time
-	-	No dedicated closing event based gateway
-
-Attached Events
-	-	Activity gets cancelled through the occurence of an event
-	-	If the event occurs an alternative path is token
-
-Best Practices
+# Best Practices
 	-	Scoping
 		*	Create processes that are accessible and expressive so anybody understands them
 		*	Accessible : the process is so clearly designed that the user can grasp it
@@ -137,7 +137,7 @@ Best Practices
 		*	for a succesful outcome go straight
 		*	otherwise go down
 
-Best Practices Kit
+# Best Practices Kit
 	-	15 tasks rule
 	-	no message events for internal communication
 	-	complete pools
