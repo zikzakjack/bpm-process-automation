@@ -26,7 +26,8 @@
 * Throwing Intermediate Message Event (nice to have)
 * End Message Event
 
-## Plain Intermediate Event	>> to visualize a milestone
+## Plain Intermediate Event	
+* to visualize a milestone
 
 ## Timer Event
 * Represents a date or time period
@@ -114,30 +115,30 @@
 
 # Best Practices
 * Scoping
-		*	Create processes that are accessible and expressive so anybody understands them
-		*	Accessible : the process is so clearly designed that the user can grasp it
-		*	Expressive : the content is meaningful and helps users to tackle business challenges
-		*	processes for business users should not contain more that 15 tasks
-		*	processes for technical users can contain more that 15 tasks
-		*	effectively structure the processes
+  * Create processes that are accessible and expressive so anybody understands them
+  * Accessible : the process is so clearly designed that the user can grasp it
+  * Expressive : the content is meaningful and helps users to tackle business challenges
+  * processes for business users should not contain more that 15 tasks
+  * processes for technical users can contain more that 15 tasks
+  * effectively structure the processes
 * Collaboration
-		*	hand-overs within organization should not use message events
-		*	message event should not be used for internal communications
-		*	use sequence flow for Collaboration within one pool
-		*	use message event for Collaboration between pools
+  * hand-overs within organization should not use message events
+  * message event should not be used for internal communications
+  * use sequence flow for Collaboration within one pool
+  * use message event for Collaboration between pools
 * Consistent Flow
-		*	every process in a pool should exist on its own
-		*	from start until the end of the event, the sequence flow must not be interrupted within one pool
-		*	using collapsed pool will decrease the complexity of your process decisively
-		*	use two entire pools, only if the use case requires it
+  * every process in a pool should exist on its own
+  * from start until the end of the event, the sequence flow must not be interrupted within one pool
+  * using collapsed pool will decrease the complexity of your process decisively
+  * use two entire pools, only if the use case requires it
 * Naming Conventions
-		*	Pools and Lanes	-	dont use specific names to label pools. use general terms (roles /  departments / team) etc
-		*	Tasks	-	use verbs to name the tasks
-		*	Events	-	label events with a passive description
+  * Pools and Lanes	-	dont use specific names to label pools. use general terms (roles /  departments / team) etc
+  * Tasks	-	use verbs to name the tasks
+  * Events	-	label events with a passive description
 * Success Path
-		*	Straight to success
-		*	for a succesful outcome go straight
-		*	otherwise go down
+  * Straight to success
+  * for a successful outcome go straight
+  * otherwise go down
 
 # Best Practices Kit
 * 15 tasks rule
