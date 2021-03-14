@@ -39,8 +39,17 @@
 * Can also be a waiting point
 
 ## Attached Events
-* Activity gets cancelled through the occurence of an event
+* Activity gets cancelled through the occurrence of an event
 * If the event occurs an alternative path is token
+
+## Link Event
+* Appears as a pair of Throwing Link Event and Catching Link Event
+* The two corresponding Link Events replace a sequence flow
+* Helps to avoid crossing sequence flows in one process
+* Also allows you to slice a process
+* Cut the larger sequence flows and bridge it using Link Events
+* Link Event is not intended to connect follow up processes
+* For follow up processes simply use the Start and Stop Events
 
 # Activity 
 * Activity or Task defines the unit of work
@@ -48,6 +57,10 @@
 # Task vs Event 
 * Task	>>	Task describes the action of sending the book and invoice
 * Event	>>	Event states that the book and invoice have been sent. No actions are taken.
+
+# Sub Process
+* Allows you to condense information
+* links to another more detailed process
 
 # Gateway >> Defines a decision point
 
